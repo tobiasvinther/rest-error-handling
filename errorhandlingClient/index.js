@@ -1,14 +1,15 @@
-
 import { renderTemplate, setActive, showPage } from "./utils.js"
 import { loadAllQuotes } from "./js-for-pages/page2.js"
 import { setUpAddButtonHandler } from "./js-for-pages/page3.js"
 import { page4Handlers } from "./js-for-pages/page4.js"
 
 function renderMenuItems(evt) {
+  
   const element = evt.target
   setActive(element)
   const id = element.id;
   renderTemplate(id)  //This setups the HTML for the page
+
   switch (id) {
     //Here you can execute JavaScript for the selected page
     case "page-1": {
